@@ -80,7 +80,7 @@ Body examples:
 ```
 Motivation: clarify failure mode when inputs overflow platform ints.
 Notes: kept branch coverage; added parametrized tests for boundaries.
-``` 
+```
 
 ## Safety Nets
 - Run the "verify" task locally before pushing (ruff, mypy, tests).

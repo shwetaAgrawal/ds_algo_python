@@ -1,7 +1,7 @@
 [project]
-name = "python-starter-repo-template"
+name = "ds_algo_python"
 version = "0.1.0"
-description = "Starter Python project with uv, pytest, mypy, ruff, and VS Code tasks"
+description = "bundles basic to advanced DS and algo"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
@@ -61,4 +61,3 @@ ruff = true
 
 [tool.nbqa.addopts]
 ruff = []
-

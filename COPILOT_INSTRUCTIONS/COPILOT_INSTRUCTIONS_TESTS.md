@@ -1,4 +1,4 @@
-You are provided with the test_ and source code files. Analyze the source, then critically review the test_ file to identify missing test cases. Once identified, IMPLEMENT these. 
+You are provided with the test_ and source code files. Analyze the source, then critically review the test_ file to identify missing test cases. Once identified, IMPLEMENT these.
 
 # GUIDELINES FOR IMPLEMENTING TESTS
 ## CORE PRINCIPLES
@@ -8,14 +8,14 @@ You are provided with the test_ and source code files. Analyze the source, then 
 
 ### 2. Required File Structure
 Each test file must have this exact order:
-1. Module docstring  
+1. Module docstring
 2. Imports
 3. **Exactly one** `### Proposed Test Cases` section (see Planning Phase below)
    - **CRITICAL**: This section must be a COMMENT block, not executable code
     - **FOR NEW FILES ONLY**: Place immediately after imports, before any executable code
     - **FOR EXISTING FILES**: If the section exists, update it in-place. If none exists, **append it at the END of the file** to avoid reordering existing code.
-4. Module-level fixtures and helper functions  
-5. Test classes and functions  
+4. Module-level fixtures and helper functions
+5. Test classes and functions
 
 **Example of proper placement in NEW files:**
 ```python
@@ -70,20 +70,20 @@ class TestMyClass:
 - Compare with existing tests to find coverage gaps using the methodology below.
 
 ### Planning Phase
-- **Proposed Test Cases Section**: 
+- **Proposed Test Cases Section**:
   - **FOR NEW FILES**: Must appear immediately after imports AS A COMMENT BLOCK
-  - **FOR EXISTING FILES**: 
+  - **FOR EXISTING FILES**:
         - If section exists: Update existing section in-place
         - If no section exists: Create at END of file, not between imports and code
   - **CRITICAL PLACEMENT RULES**:
     - **New file**: Place after imports, before any code
         - **Existing file**: UPDATE existing section in-place, or create at end if none exists
-  - **If section exists**: 
+  - **If section exists**:
     - Review existing items
     - Mark completed items with `[IMPLEMENTED]` prefix in-place
     - Update existing test case descriptions if they need improvement
     - Append only NEW test cases that aren't already listed or implemented
-    - **If section doesn't exist in existing file**: Create it at the END of the file (not between imports and code)  
+    - **If section doesn't exist in existing file**: Create it at the END of the file (not between imports and code)
 
 ### Implementation Phase
 
@@ -96,9 +96,9 @@ class TestMyClass:
 
 Implement tests in this priority order:
 1. Core functionality tests (missing happy paths)
-2. Edge cases and boundary conditions  
+2. Edge cases and boundary conditions
 3. Error scenarios and exception handling
-4. Integration tests  
+4. Integration tests
 
 ### Verification Phase
 - Verify imports, signatures, async usage, fixture availability, and logical assertions.
@@ -164,7 +164,7 @@ Look for these common gaps:
    - NO → Continue to step 2
 
 2. **Is the fixture needed by multiple test files in the same directory?**
-   - YES → Place in local `conftest.py` in that directory (Component Fixtures)  
+   - YES → Place in local `conftest.py` in that directory (Component Fixtures)
    - NO → Continue to step 3
 
 3. **Is the fixture only needed by one test module?**
@@ -255,10 +255,10 @@ def test_method_with_valid_input(self, fixture_name):
     # Arrange
     input_data = {"key": "value"}
     expected_result = {"processed": True}
-    
+
     # Act
     result = method_under_test(input_data)
-    
+
     # Assert
     assert result == expected_result
     assert isinstance(result, dict)
