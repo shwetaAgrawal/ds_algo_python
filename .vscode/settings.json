@@ -9,6 +9,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.ruff": "explicit"
   },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "terminal.integrated.env.osx": {
     "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}",
     "VIRTUAL_ENV": "${workspaceFolder}/.venv"
